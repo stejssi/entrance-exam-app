@@ -1,0 +1,109 @@
+
+:root {
+  --boja-ink: #1B2A4A;
+  --boja-ink-svetlija: #2C3E63;
+  --boja-papir: #F5F6F2;
+  --boja-pecat: #A33B3B;
+  --boja-kreda: #2F6F4E;
+  --boja-grafit: #33363B;
+  --boja-slate: #6B7A8F;
+  --boja-linija: #D8D3C6;
+
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+body {
+  background-color: var(--boja-papir);
+  color: var(--boja-grafit);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-body);
+  color: var(--boja-ink);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--boja-linija);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+/* Bootstrap dugmad */
+.btn-primary {
+  background-color: var(--boja-ink);
+  border-color: var(--boja-ink);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--boja-ink-svetlija);
+  border-color: var(--boja-ink-svetlija);
+}
+.btn-success {
+  background-color: var(--boja-kreda);
+  border-color: var(--boja-kreda);
+}
+.btn-outline-danger {
+  color: var(--boja-pecat);
+  border-color: var(--boja-pecat);
+}
+.btn-outline-danger:hover {
+  background-color: var(--boja-pecat);
+  border-color: var(--boja-pecat);
+}
+
+/* Vidljiv fokus tastature */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--boja-pecat);
+  outline-offset: 2px;
+}
+
+/* ===== Navigacija ===== */
+.navbar-fon {
+  background-color: var(--boja-ink) !important;
+  border-bottom: 3px double rgba(255, 255, 255, 0.2);
+}
+
+.navbar-fon .container {
+  align-items: center;
+}
+
+/* Brend u navigaciji koristi čist sans-serif font */
+.navbar-fon .app-brand {
+  font-family: var(--font-body) !important;
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+/* Navigacioni linkovi i tekst */
+.navbar-fon .nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.95rem;
+  transition: color 0.15s ease-in-out;
+}
+
+.navbar-fon .nav-link:hover,
+.navbar-fon .nav-link.active {
+  color: #ffffff !important;
+}
+
+.navbar-fon .navbar-text {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.9rem;
+}
+
+/* Na uskom ekranu, smanjujemo razmak oko sadrzaja da ne bude previse stisnuto */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .navbar-fon .app-brand {
+    font-size: 1.05rem;
+  }
+}
